@@ -1,7 +1,7 @@
 cd ../BaseService/BaseService.Host
 start dotnet run
 
-cd  ../../AuthServer/IdentityServer/AuthServer.Host
+cd  ../../AuthServer/OpenIddict/AuthServer.Host
 start dotnet run
 
 cd ../../../MicroServices/Business/Business.Host

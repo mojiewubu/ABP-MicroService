@@ -16,7 +16,7 @@ namespace FileStorage.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<FileStorageMigrationDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("FileStorage"));
+                .UseNpgsql(configuration.GetConnectionString("FileStorage"));
 
             return new FileStorageMigrationDbContext(builder.Options);
         }

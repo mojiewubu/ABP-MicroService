@@ -12,7 +12,7 @@ namespace Business.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<BusinessMigrationDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Business"));
+                .UseNpgsql(configuration.GetConnectionString("Business"));
 
             return new BusinessMigrationDbContext(builder.Options);
         }

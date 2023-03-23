@@ -104,7 +104,7 @@ namespace WebAppGateway
         {
             Configure<AbpDbContextOptions>(options =>
             {
-                options.UseSqlServer();
+                options.UsePostgreSql();
             });
         }
 

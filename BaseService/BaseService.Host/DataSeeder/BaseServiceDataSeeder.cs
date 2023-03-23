@@ -76,7 +76,7 @@ namespace BaseService.DataSeeder
         private async Task CreateMenus()
         {
             var adminRole = (await RoleRepository.GetDbSetAsync()).FirstOrDefault();
-            var menus = new MenuSeeder().GetSeed();
+            var menus = new MenuSeeder().GetVue3Seed();
             if (_currentTenant.Id != null)
             {
                 menus = menus.Where(_ => _.IsHost == false).ToList();

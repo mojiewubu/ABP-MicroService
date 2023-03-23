@@ -14,7 +14,7 @@ namespace BaseService.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<BaseServiceMigrationDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseNpgsql(configuration.GetConnectionString("Default"));
 
             return new BaseServiceMigrationDbContext(builder.Options);
         }
